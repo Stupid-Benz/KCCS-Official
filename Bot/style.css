@@ -67,7 +67,7 @@ header #toggle::after{
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  background-color: black;
+  background-color: black; /*Background*/
   background-size: cover;
   display: flex;
   align-items: center;
@@ -92,9 +92,6 @@ header #toggle::after{
 #navigation.active{
   right: 0;
 }
-#navigation ul a:hover{
-	color: black;
-}
 #navigation ul{
   position: relative;
   display: flex;
@@ -111,76 +108,39 @@ header #toggle::after{
   font-weight: 600;
   text-transform: uppercase;
 }
-.team-section{
-  overflow: hidden;
-  text-align: center;
-  background: black;
-  padding: 60px;
-	position: relative;
+#navigation ul li a:hover{
+	color: black;
 }
-.team-section h1{
-  text-transform: uppercase;
-  margin-bottom: 60px;
-  color: white;
-  font-size: 40px;
+.sci{
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
-.border{
-  display: block;
-  margin: auto;
-  width: 300px;
-  height: 3px;
-  background: #3498db;
-  margin-bottom: 40px;
+.sci li{
+  list-style: none;
 }
-table{
-	text-align: center;
+.sci li a{
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 400px;
+  text-decoration: none;
+  margin: 10px 150px 0;
 }
-table tbody tr th{
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-right: 25px;
-	padding-left: 25px;
-	font-size: 1.5em;
-	color: white;
+.sci li a:hover{
+	box-shadow: 0 4px 8px 0 #40c3ff, 0 6px 20px 0 #40c3ff;
 }
-table tbody tr td{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
-	font-size: 1.2em;
-	color: white;
-}
-a{
-	color: white;
-	text-decoration: none;
-}
-.freeapps{
-	margin-left: auto;
-	margin-right: auto;
-}
-.freeapps h1{
-	color: white;
-	font-size: 2em;
-	padding-bottom: 25px;
-	text-align: center;
-}
-.freeapps h2{
-	color: white;
-	padding-bottom: 25px;
-	text-align: center;
-}
-.icon{
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+.sci li a img{
+  width: 400px;
+  mix-blend-mode: difference;
 }
 @media (max-width: 850px){
   header{
     padding: 20px 50px;
   }
   .banner{
-    padding: 100px 10px 150px;
+    padding: 100px 50px 150px;
   }
   .banner h2{
     font-size: 1.8em;
@@ -198,11 +158,20 @@ a{
     font-size: 1.5em;
     margin: 5px 0;
   }
+  .sci{
+    position: relative;
+		flex-direction: column;
+  }
+  .sci li a{
+		margin: 20px 25px 0;
+ 		width: 200px;
+ 		height: 200px;
+  }
+	.sci li a img{
+		width: 200px;
+	}
 	.logoimg{
 		width: 75px;
 		height: 75px;
-	}
-	.freeapps{
-		font-size: 0.5em;
 	}
 }

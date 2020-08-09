@@ -67,120 +67,90 @@ header #toggle::after{
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  background-color: black;
+  background-color: black; /*Background*/
   background-size: cover;
   display: flex;
   align-items: center;
   transition: 0.5s;
   z-index: 2;
 }
-.banner.active{
-  transform: translateX(-400px);
+.content{
+	margin-top: 100px;
 }
-#navigation{
-  position: fixed;
-  top: 0;
-  right: -200px;
-  width: 400px;
-  height: 100vh;
-  background: #40c3ff;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  transition: 0.5s;
-}
-#navigation.active{
-  right: 0;
-}
-#navigation ul a:hover{
-	color: black;
-}
-#navigation ul{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-#navigation ul li{
-  list-style: none;
-}
-#navigation ul li a{
-  color: white;
+.link:link, .link:visited {
+  background-color: #f44336;
+  color: black;
+  padding: 30px 30px;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 2em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.team-section{
-  overflow: hidden;
-  text-align: center;
-  background: black;
-  padding: 60px;
 	position: relative;
+  margin-top: 20px;
+  background: white;
+  font-size: 1.25em;
+  font-weight: 700;
 }
-.team-section h1{
-  text-transform: uppercase;
-  margin-bottom: 60px;
+.link:hover, .link:active {
+  background-color: red;
+}
+.content h1{
   color: white;
-  font-size: 40px;
+  font-size: 2.5em;
 }
-.border{
-  display: block;
-  margin: auto;
-  width: 300px;
-  height: 3px;
-  background: #3498db;
-  margin-bottom: 40px;
+.content h1 span{
+	color: #f44336;
+  font-size: 1.2em;
 }
-table{
-	text-align: center;
+.content span{
+  color: #40c3ff;
+  font-size: 1.2em;
 }
-table tbody tr th{
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-right: 25px;
-	padding-left: 25px;
-	font-size: 1.5em;
+.content h2{
+  color: white;
+  font-size: 2em;
+}
+.content h3{
+  color: white;
+  font-size: 1em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5em;
 	color: white;
 }
-table tbody tr td{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
-	font-size: 1.2em;
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5em;
 	color: white;
 }
-a{
-	color: white;
-	text-decoration: none;
+.home{
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: 700;
 }
-.freeapps{
-	margin-left: auto;
-	margin-right: auto;
-}
-.freeapps h1{
-	color: white;
-	font-size: 2em;
-	padding-bottom: 25px;
-	text-align: center;
-}
-.freeapps h2{
-	color: white;
-	padding-bottom: 25px;
-	text-align: center;
-}
-.icon{
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+.home:hover{
+	background: #f44336;
 }
 @media (max-width: 850px){
   header{
     padding: 20px 50px;
   }
   .banner{
-    padding: 100px 10px 150px;
+    padding: 100px 50px 150px;
   }
   .banner h2{
     font-size: 1.8em;
@@ -191,18 +161,29 @@ a{
   .banner.active{
     transform: translateX(-250px);
   }
-  #navigation{
-    width: 250px;
-  }
-  #navigation ul li a{
-    font-size: 1.5em;
-    margin: 5px 0;
-  }
 	.logoimg{
 		width: 75px;
 		height: 75px;
 	}
-	.freeapps{
-		font-size: 0.5em;
+	.home{
+		margin-top: 10px;
+		padding: 30px 30px;
+		font-weight: 500;
+		font-size: 0.8em;
+	}
+	.content h1{
+		font-size: 1.2em;
+	}
+	.content h1 span{
+		font-size: 1em;
+	}
+	.content h2{
+		font-size: 1em;
+	}
+	th{
+		font-size: 1em;
+	}
+	td{
+		font-size: 0.75em;
 	}
 }

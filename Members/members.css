@@ -148,13 +148,13 @@ header #toggle::after{
 	text-align: justify;
 }
 #leader{
-	max-width: 100%;
+	width: 100%;
 }
 #admin{
-	max-width: 100%;
+	width: 100%;
 }
 #moderator{
-	max-width: 100%;
+	width: 100%;
 }
 .icon{
 	border-radius: 50%;

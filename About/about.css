@@ -112,7 +112,7 @@ header #toggle::after{
   text-transform: uppercase;
 }
 .content{
-	max-width: 650px;
+	max-width: 800px;
 }
 .content h2{
   color: white;
