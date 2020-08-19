@@ -118,6 +118,7 @@ header #toggle::after{
 }
 .sci li{
   list-style: none;
+  margin: 25px;
 }
 .sci li a{
   position: relative;
@@ -126,7 +127,6 @@ header #toggle::after{
   width: 400px;
   height: 400px;
   text-decoration: none;
-  margin: 10px 150px 0;
 }
 .sci li a:hover{
 	box-shadow: 0 4px 8px 0 #40c3ff, 0 6px 20px 0 #40c3ff;
@@ -135,12 +135,23 @@ header #toggle::after{
   width: 400px;
   mix-blend-mode: difference;
 }
+@media (max-width: 1000px){
+  .banner{
+    padding: 100px 20px 150px;
+  }
+  .sci li{
+    margin: 5px;
+  }
+  .sci li a img{
+    width: 300px;
+  }
+}
 @media (max-width: 850px){
   header{
     padding: 20px 50px;
   }
   .banner{
-    padding: 100px 50px 150px;
+    padding: 100px 20px 150px;
   }
   .banner h2{
     font-size: 1.8em;
