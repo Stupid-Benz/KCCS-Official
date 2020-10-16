@@ -67,7 +67,7 @@ header #toggle::after{
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  background-color: black; /*Background*/
+  background-color: black;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -92,6 +92,9 @@ header #toggle::after{
 #navigation.active{
   right: 0;
 }
+#navigation ul a:hover{
+	color: black;
+}
 #navigation ul{
   position: relative;
   display: flex;
@@ -108,15 +111,81 @@ header #toggle::after{
   font-weight: 600;
   text-transform: uppercase;
 }
-#navigation ul li a:hover{
-	color: black;
+.team-section{
+  overflow: hidden;
+  text-align: center;
+  background: black;
+  padding: 60px;
+	position: relative;
 }
-.content{
-	max-width: 800px;
+.team-section h1{
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  color: white;
+  font-size: 40px;
+}
+.border{
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 3px;
+  background: #3498db;
+  margin-bottom: 40px;
+}.content{
+	margin-top: 100px;
+}
+.content h1{
+  color: white;
+  font-size: 2.5em;
+}
+.content h1 span{
+	color: #f44336;
+  font-size: 1.2em;
+}
+.content span{
+  color: #40c3ff;
+  font-size: 1.2em;
+}
+.content h3{
+  color: lightgreen;
+  font-size: 1.75em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5em;
+	color: white;
+}
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5em;
+	color: white;
+}
+.button{
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2em;
+  position: relative;
+  padding: 20px;
+}
+.button img{
+  width: 75px;
+}
+.button:hover{
+  color: #f44336;
 }
 .content h2{
   color: white;
   font-size: 2.5em;
+	padding-bottom: 25px;
 }
 .content h2 span{
   color: #40c3ff;
@@ -126,7 +195,8 @@ header #toggle::after{
   font-size: 1.2em;
   color: white;
   font-weight: 300;
-	text-align: justify;
+  text-align: justify;
+  width: 90%;
 }
 .content a{
   position: relative;
@@ -138,6 +208,45 @@ header #toggle::after{
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 500;
+}
+#leader{
+	width: 100%;
+}
+#admin{
+	width: 100%;
+}
+#moderator{
+	width: 100%;
+}
+.icon{
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+.leader{
+	color: #ff0000;
+	text-align: center;
+	font-size: 3em;
+	padding-bottom: 50px;
+}
+.admin{
+	color: #ff0000;
+	text-align: center;
+	font-size: 2.5em;
+	padding-bottom: 50px;
+}
+.moderator{
+	color: #5ACFF5;
+	text-align: center;
+	font-size: 2.5em;
+	padding-bottom: 50px;
+}
+.name{
+  display: block;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
 }
 .sci{
   position: absolute;
@@ -166,6 +275,61 @@ header #toggle::after{
   filter: invert(1);
   mix-blend-mode: difference;
 }
+.bot{
+  position: initial;
+  display: flex;
+  flex-direction: column;
+  right: 100px;
+}
+.bot li{
+  list-style: none;
+}
+.bot li a{
+  display: list-item;
+  text-decoration: none;
+  color: #5ACFF5;
+  margin: initial;
+  font-size: 5em;
+  font-weight: 400;
+}
+table{
+	text-align: center;
+}
+table tbody tr th{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	font-size: 1.5em;
+	color: white;
+}
+table tbody tr td{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 1.2em;
+	color: white;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+.freeapps{
+	margin-left: auto;
+	margin-right: auto;
+}
+.freeapps h1{
+	color: white;
+	font-size: 2em;
+	padding-bottom: 25px;
+	text-align: center;
+}
+.freeapps h2{
+	color: white;
+	padding-bottom: 25px;
+	text-align: center;
+}
 @media (max-width: 850px){
   header{
     padding: 20px 50px;
@@ -189,7 +353,31 @@ header #toggle::after{
     font-size: 1.5em;
     margin: 5px 0;
   }
-  .sci{
+	.logoimg{
+		width: 75px;
+		height: 75px;
+	}
+	.leader{
+		padding-top: 25px;
+		font-size: 2em;
+		padding-bottom: 25px;
+	}
+	.admin{
+		font-size: 1.5em;
+		padding-bottom: 25px;
+	}
+	.moderator{
+		font-size: 1.5em;
+		padding-bottom: 25px;
+	}
+	.content h2{
+  	font-size: 1.5em;
+		padding-bottom: 25px;
+	}
+	.content h2 span{
+  	font-size: 1.1em;
+	}
+	.sci{
     position: absolute;
     bottom: 50px;
     right: initial;
@@ -199,11 +387,8 @@ header #toggle::after{
     margin: initial;
     margin-right: 10px;
   }
-	.logoimg{
-		width: 75px;
-		height: 75px;
-	}
 }
+
 ::-webkit-scrollbar{
   background: black;
   width: 14px;
